@@ -16,6 +16,8 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 $reponse = $bdd->query('SELECT * FROM document group by Titredocument');
+//$nbdoc = $bdd->query('SELECT count(*) from document where Titredocument in (SELECT Titredocument from document WHERE IDdocument='?''))
+
 
 ?>
 <br>
@@ -23,7 +25,7 @@ $reponse = $bdd->query('SELECT * FROM document group by Titredocument');
 
       <tr>
         <th><b></b></th>
-        <th><b>resumé</b></th>
+        <th><b></b></th>
           <th><b>Titre document</b></th>
           <th>Auteur document</th>
           <th>Theme document</th>
@@ -36,7 +38,7 @@ while ($donnees = $reponse->fetch())
 { ?>
   <tr>
       <th><?php echo "<input type='hidden' name='tab[".$donnees['IDdocument']."]' value='".$donnees['IDdocument']."'>" ?>
-      <th><?php echo $donnees['ResumeDocument'];?></th>
+      <th><?php echo "<input type='hidden' name='tab[".$donnees['ResumeDocument']."]' value='".$donnees['ResumeDocument']."'>" ?>
       <th><?php echo $donnees['Titredocument'];?></th>
       <th><?php echo $donnees['NomAuteurDocument'];?></th>
       <th><?php echo $donnees['ThemeDocument'];?></th>
