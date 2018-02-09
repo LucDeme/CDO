@@ -1,8 +1,9 @@
 <?php
 //session_start();
+
 include("./menu.php");
 ?>
-
+<link rel="stylesheet" href="./style.css" >
 <script type="text/javascript">
  $(document).ready(function () {
     $('.forgot-pass').click(function(event) {
@@ -32,7 +33,7 @@ include("./menu.php");
             </div>
             <div class="wrap">
                 <p class="form-title">Sign In</p>
-                <form method="post" name="formlogin" class="login" action="/cdores/.git/document.php">
+                <form method="post" name="formlogin" class="login">
                 	<input type="text" placeholder="Username" name="user" required />
                 	<input type="password" placeholder="Password" name="password" required/>
                 	<input type="submit" value="login" name="login" class="btn btn-success btn-sm" />
@@ -59,24 +60,28 @@ if (intval($control) > 0){ //connecté
 	$_SESSION['estAuthentifié']=true;
 
 	if ($_SESSION['estAuthentifié']===true){
-    include("./navbar.php");
+    echo "<script type='text/javascript'>document.location.replace('./document.php');</script>";
+    //include("./navbar.php");
 
 	}
-	else 
-		exit();
+
 	}
 else { //non connecté
-	echo "non connecté haha";
+	echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><div class='container'><div class='row justify-content-center'><div class='col-4'><div class='alert alert-danger' role='alert'>
+  Mot de passes incorect! veuillez réessayer.
+</div></div></div>" ;
 }
 }
 
 
-
+/*<div class='container'><div class='alert alert-danger' role='alert'>
+  This is a danger alert—check it out!
+</div>*/
 
 Function verification($mdp_crypt, $username){
 	try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', 'root');
 }
 catch (Exception $e)
 {
@@ -84,6 +89,7 @@ catch (Exception $e)
 }
 $requete = "SELECT count(*) FROM `utilisateur` WHERE `Emailutilisateur` = '".$username."' and `MDPutilisateur` = '".$mdp_crypt."'";
 $reponse = $bdd->query($requete);
+
 return $reponse->fetchAll();
 }
 

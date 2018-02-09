@@ -1,9 +1,53 @@
 
+#titreco 
+{
+    color: #fff;
+}
+.tblstage {
+  font-style: #FFF
+  font-weight: normal;  /*police en gras */
+  width:1000px;        /*taille police */
+  margin-left: auto;
+  margin-right: auto;
+}
+.tblstage th, .tblstage td {
+border-bottom: 1px solid #ddd;
+padding-top: 10px;
+}
 
+.tblentreprise {
+  width:400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tblentreprise th, .tblentreprise td {
+border-bottom: 1px solid #ddd;
+padding-top: 10px;
+}
+
+.tblcontact {
+  width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tblcontact th, .tblcontact td {
+border-bottom: 1px solid #ddd;
+padding-top: 10px;
+}
+
+.tblstages {
+  font-weight: bold;  /*police en gras */
+  width:1400px;        /*taille police */
+  margin-left: auto;
+  margin-right: auto;
+}
+.tblstages th, .tblstage td {
+border-bottom: 1px solid #ddd;
+padding-top: 10px;
+}
 body
 {
-    background-color: #424242;
-    /*background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed; */
+    background: url('http://hdwarena.com/wp-content/uploads/2017/01/Colorful-Blur-Wallpaper.jpg') fixed; 
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -26,7 +70,7 @@ p.form-title
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
     margin-top: 5%;
     text-transform: uppercase;
     letter-spacing: 4px;

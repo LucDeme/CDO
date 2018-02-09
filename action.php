@@ -2,7 +2,7 @@
 try
 {
 	echo '<br />';
-    $bdd = new PDO('mysql:host=localhost;dbname=cdo;charset=utf8', 'root', '');  //on declare un obget pdo et on précise la bdd identifiant..;
+    $bdd = new PDO('mysql:host=localhost;dbname=cdo;charset=utf8', 'root', 'root');  //on declare un obget pdo et on précise la bdd identifiant..;
     // echo'connexion OK <br />'; border="1" width="70%" align="center"
 }
 catch (Exception $e)

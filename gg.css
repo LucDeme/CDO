@@ -1,6 +1,10 @@
-
+body
+{
+  background-color: #0F0F0F;
+}
 
 .tblstage {
+  font-style: #FFF
   font-weight: normal;  /*police en gras */
   width:1000px;        /*taille police */
   margin-left: auto;

@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="./gg.css" >
-<link rel="stylesheet" href="./navbar.php" >
+
 <?php
 include("./navbar.php");
 include("./menu.php");
@@ -7,7 +6,7 @@ include("./menu.php");
 try
 {
 	echo '<br />';
-    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', 'root');
     // echo'connexion OK <br />'; border="1" width="70%" align="center"
 }
 catch (Exception $e)
@@ -21,10 +20,10 @@ $pret = $bdd->query('SELECT * FROM pret');
 <!--SELECT * FROM stage inner join entreprise on stage.id_entreprise=entreprise.id_entreprise'*/
 -->
 <?php $tab = $nom->fetch();?>
-   
-<h2>Bonjour <b><?php echo $tab['Nomutilisateur'];?></b> bienvenue sur votre espace perso </h2><p> demander ralonge de pret
+<body>   
+<h2 id="titreco">Bonjour <b><?php echo $tab['Nomutilisateur'];?></b> bienvenue sur votre espace perso </h2 ><p id="titreco"> demander ralonge de pret
 Listes de vos ouvrages emprunté:</p>
-<h1>reservation</h1>
+<h1 id="titreco">reservation</h1>
 <table class="tblcontact" >
 <br>
   <tr>
@@ -51,7 +50,7 @@ Listes de vos ouvrages emprunté:</p>
 ?>
 </table>
 
-
+</body>
 
 <h1>pret</h1>
 <table class="tblcontact" >

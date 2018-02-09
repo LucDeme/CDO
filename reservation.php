@@ -10,7 +10,7 @@ include("./menu.php");
 try
 {
 	echo '<br />';
-    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=CDO;charset=utf8', 'root', 'root');
  // echo'connexion OK <br />';
 }
 catch (Exception $e)
