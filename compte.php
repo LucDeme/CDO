@@ -52,7 +52,7 @@ Listes de vos ouvrages emprunté:</p>
 
 </body>
 
-<h1>pret</h1>
+<h1  id="titreco">pret</h1>
 <table class="tblcontact" >
   <br>
     <tr>
